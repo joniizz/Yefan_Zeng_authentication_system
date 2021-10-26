@@ -27,7 +27,7 @@ const Signup = () => {
             password2: password2,
         };
         //a fetch request to the API
-        fetch('http://localhost:8000/api/v1/users/auth/register/', {
+        fetch('http://127.0.0.1:8000/api/v1/users/auth/register/', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -39,7 +39,7 @@ const Signup = () => {
         // is returned
         .then(res =>res.json())
         .then(data => {
-            if (data.key) { //token returned by API, show dashbaord
+            if (data.key) { //token returned by API, show dashboard
                 localStorage.clear();
                 localStorage.setItem('token', data.key);
                 window.location.replace('http://localhost:3000/dashboard');
@@ -51,32 +51,37 @@ const Signup = () => {
                 localStorage.clear();
                 setErrors(true);
             }
-        })
-    }
+        });
+    };
 
     return (
-        <div>
+        <div className='formsignup'>
             {loading == false && <h1>Signup</h1>}
-            {errors === true && <h2> Cannot login with provided information</h2>}
+            {errors === true && <h2> Cannot sign up with provided information</h2>}
 
-                <form onSubmit={onSubmit}>
+            <form onSubmit={onSubmit}>
                     <label htmlFor='email'>
-                        Email address:</label><br/>
+                        Email address:</label>
+                        <text className='marker'>(Required. 150 characters or fewer. Letters, digits and @/./+/-/_ only.)</text>
+                        <br/>
                     <input 
                         name='email'
                         type='email'
                         value={email}
                         required
                         onChange={e => setEmail(e.target.value)}
-                        />{' '}
+                        />{' '} 
+                        
                         <br/>
-                        <label htmlFor='password1'>Password:</label><br/>
+                        <label htmlFor='password1'>Password:</label><text className='marker'>(It must contain at least 8 characters.)</text>
+                        <br/>
+
                         <input 
                             name='password1'
                             type='password'
                             value={password1}
-                            required
                             onChange={e => setPassword1(e.target.value)}
+                            required
                             />{''}
                             <br/>
                             <label htmlFor='password2'>Password confirm:</label><br/>
@@ -84,9 +89,9 @@ const Signup = () => {
                             name='password2'
                             type='password'
                             value={password2}
-                            required
                             onChange={e => setPassword2(e.target.value)}
-                            />{''}
+                            required
+                            />{' '}
                             <br/>
                             <input type='submit' value='Signup' />
 
@@ -94,8 +99,8 @@ const Signup = () => {
 
 
         </div>
-    )
+    );
 
-}
+};
 export default Signup;
 

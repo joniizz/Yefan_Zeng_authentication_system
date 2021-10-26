@@ -51,20 +51,22 @@ const Login = () => {
     }
 
     return (
-        <div>
+        <div className='formlogin'>
             {loading == false && <h1>Login</h1>}
-            {errors === true && <h2> Cannot login with provided information</h2>}
+            {errors === true && <h2> Cannot login with provided information, please try again!</h2>}
             {loading == false && (
                 <form onSubmit={onSubmit}>
-                    <label htmlFor='email'>
-                        Email address:</label><br/>
+                    
+                    <label htmlFor='email' >
+                        Email address:</label>
+                        <br/>
                     <input 
                         name='email'
                         type='email'
                         value={email}
                         required
                         onChange={e => setEmail(e.target.value)}
-                        />{' '}
+                        />
                         <br/>
                         <label htmlFor='password'>Password:</label><br/>
                         <input 
@@ -76,7 +78,7 @@ const Login = () => {
                             />
                             <br/>
                             <input type='submit' value='Login'/>
-
+                  
                 </form>
             )}
 

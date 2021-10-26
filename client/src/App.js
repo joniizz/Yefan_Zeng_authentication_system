@@ -4,6 +4,7 @@ import Navbar from './components/layout/Navbar'; //import navbar
 import Login from './views/auth/Login'; // new 
 import Signup from './views/auth/Signup'; // new
 import Logout from './views/auth/Logout'; // New
+import Dashboard from './views/app/Dashboard';
 
 //placed the Router and Switch components that were imported into the App div.
 // Route exact: only this view should be rendered at the specific route
@@ -16,6 +17,7 @@ const App = () =>{
           <Route path='/login' component={Login} exact />
           <Route path='/signup' component={Signup} exact />
           <Route path='/logout' component={Logout} exact />
+          <Route path='/dashboard' component={Dashboard} exact />
         </Switch>
       </Router>
   </div>

@@ -8,7 +8,7 @@ const Logout = () => {
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        if (localStorage.getItem('token') !== null) {
+        if (localStorage.getItem('token') == null) {
             window.location.replace('http://localhost:3000/login');
         } else {
             setLoading(false);
@@ -19,17 +19,14 @@ const Logout = () => {
 
     const handleLogout = e => {
         e.preventDefault(); //to keep the page from refreshing when the form is submitted
-        const user = {
-            email: email,
-            password: password,
-        };
+
         //a fetch request to the API
         fetch('http://localhost:8000/api/v1/users/auth/logout/', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
                 Authorization: `Token ${localStorage.getItem('token')}`
-            },
+            }
             
         })
         // check if the request was successful by
@@ -42,24 +39,26 @@ const Logout = () => {
             window.location.replace('http://localhost:3000/login');
             
 
-        })
-    }
+        });
+    };
 
     return (
         <div>
             {loading == false && (
                 <Fragment>
-                    <h1>Are you sure you want to log out?</h1>
-                    <input type='button' value='Logout' onClick={handleLogout} />
-
+                    <div className='form'>
+                    <h1 className='dashboardhead'>Are you sure you want to log out?</h1>
+                    <br/>
+                    <input type='button' value='Yes,Logout' onClick={handleLogout} />
+                    </div>
                 </Fragment>
 
                  )}
 
         </div>
-    )
+    );
 
-}
+};
 export default Logout;
 
 

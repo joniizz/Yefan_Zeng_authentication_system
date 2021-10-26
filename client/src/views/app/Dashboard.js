@@ -1,6 +1,6 @@
-import React, {useEffect, useState, Fragment} from React;
+import React, {useEffect, useState, Fragment} from 'react';
 
-const Dashbaord = () => {
+const Dashboard = () => {
     const [useremail, setUserEmail] = useState('');
     const [loading, setLoading] = useState(true);
 
@@ -9,13 +9,14 @@ const Dashbaord = () => {
             window.location.replace('http://localhost:3000/login');
 
         } else {
-            fetch('localhost:8000/api/v1/users/auth/user/',{
+            fetch('http://localhost:8000/api/v1/users/auth/user/',{
                 method: 'GET',
                 headers: {
                     'Content-Type': 'application/json',
                     Authorization: `Token ${localStorage.getItem('token')}`
                 }
-            }).then(res => res.json())
+            })
+            .then(res => res.json())
             .then(data => {
                 setUserEmail(data.email);
                 setLoading(false);
@@ -28,8 +29,10 @@ const Dashbaord = () => {
         <div>
             {loading === false && (
                 <Fragment>
-                    <h1>Dashboard</h1>
+                    <div className='form'>
+                    <h1 className='dashboardhead'>Welcome to dashboard</h1>
                     <h2>Hello {useremail}!</h2>
+                    </div>
                 </Fragment>
             )}
         </div>
@@ -37,4 +40,4 @@ const Dashbaord = () => {
     );
 
 };
-export default Dashbaord;
+export default Dashboard;

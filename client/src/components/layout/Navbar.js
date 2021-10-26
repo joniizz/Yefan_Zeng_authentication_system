@@ -13,27 +13,29 @@ const Navbar = () => {
     }, []);
     return (
         <nav>
-            <h1>Django react Auth</h1>
+            <h1>Django React Authentication System</h1>
             <ul>
                 {isAuth === true ?(
                     <Fragment>
                         {''}
-                        <li>
-                            <Link to='/dashbaord'>Dashbaord</Link>
-                        </li>
-                        <li>
-                            <Link to='/Logout'>Logout</Link>
-                        </li>
+                        <ul>
+                            <a href='/dashboard'>Dashboard</a>
+                        </ul>
+                        <ul>
+                            <a href='/Logout'>Logout</a>
+                        </ul>
                     </Fragment>
                 ) : (
                     <Fragment>
                         {''}
-                        <li>
-                            <Link to='/login'>Login</Link>
-                        </li>
-                        <li>
-                            <Link to='/Signup'>Signup</Link>
-                        </li>
+                        <ul >
+                            
+                            <a href='/login' >Login</a>
+                        </ul>
+                        {''}
+                        <ul >
+                            <a href='/Signup' >Signup</a>
+                        </ul>
                     </Fragment>
                 )}
             </ul>

@@ -1,0 +1,72 @@
+body {
+    background-color:white ;
+    color: rgb(7, 7, 7);
+    padding: 40px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+  }
+nav {
+  margin: 0 auto;
+  overflow: hidden;
+  height: 150px;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 700;
+  padding-left: 0%;
+
+  }
+nav h1{
+  color: rgb(255, 166, 0);
+  padding: 0px;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+}
+
+h2{
+  color: rgb(255, 166, 0);
+  padding: 0px;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+  font-weight: 300;
+  font-size: 15px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+a:hover {
+  color: rgb(255, 166, 0);
+}
+
+.dashboardhead{
+    list-style-type: none;
+    font-size: larger;
+    color: rgb(255, 166, 0);    
+    padding: 0px;
+    margin: 0px;
+    font-family: Arial;
+    text-align: center;
+  }
+.form {
+  background-color: rosybrown;
+  padding: 50px;
+  margin: 100px;
+  height: 64px;
+}
+.formlogin {
+  background-color: rosybrown;
+  padding: auto;
+  margin: 100px;
+  height: auto;
+}
+.formsignup {
+  background-color: rosybrown;
+  padding: 10px;
+  margin: 100px;
+  height: auto;
+  text-align: left;
+}
+.marker {
+  font-size: 10px;
+}
