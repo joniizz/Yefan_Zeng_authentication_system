@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 // 4 states, email&psw states update via onChange()
 // loading state is used to allow a buffer(useEffect()) between
 // requesting login page and when it is actuallt rendered.
-const Login = () => {
+const Signup = () => {
     const [email, setEmail] = useState('');
     const [password1, setPassword1] = useState('');
     const [password2, setPassword2] = useState('');
@@ -91,7 +91,6 @@ const Login = () => {
                             <input type='submit' value='Signup' />
 
                 </form>
-            )
 
         </div>
     )
