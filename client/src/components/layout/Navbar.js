@@ -1,7 +1,10 @@
 import React, { useState, useEffect, Fragment } from 'react';
 import { Link } from 'react-router-dom';
-
+//navbar shows on every pages
 const Navbar = () => {
+    //useState to keep track of the status of the users 
+    //authentication false ->render to login&signup links
+    //ref:https://reactjs.org/docs/conditional-rendering.html
     const [isAuth, setIsAuth] = useState(false);
     useEffect(() => {
         if (localStorage.getItem('token') !== null){
