@@ -155,10 +155,14 @@ ACCOUNT_USERNAME_REQUIRED = False
 ACCOUNT_SESSION_REMEMBER = True
 ACCOUNT_AUTHENTICATION_METHOD = 'email'
 ACCOUNT_UNIQUE_EMAIL = True
+ACCOUNT_USER_MODEL_USERNAME_FIELD = None
 # Rest Framework config. Add all of this.
 REST_FRAMEWORK = {    
-'DATETIME_FORMAT': "%m/%d/%Y %I:%M%P",    'DEFAULT_AUTHENTICATION_CLASSES': [        'rest_framework.authentication.TokenAuthentication',    
+'DATETIME_FORMAT': "%m/%d/%Y %I:%M%P",    
+'DEFAULT_AUTHENTICATION_CLASSES': [        
+    'rest_framework.authentication.TokenAuthentication',    
 ],
+'TEST_REQUEST_DEFAULT_FORMAT': 'json'
 }
 
 AUTH_USER_MODEL = 'users.CustomUser'
