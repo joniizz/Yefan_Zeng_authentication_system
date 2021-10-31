@@ -11,7 +11,7 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 
 from pathlib import Path
-
+from . import local_settings
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -20,12 +20,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-1g11@d2iiy*j!i1u(v0#53g*x#rn$jz4uk&fp^%cq5-mdnc2e9'
+SECRET_KEY = 'local_settings.secret_key'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = local_settings.debug
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = local_settings.allowed_hosts
 
 # Specifies localhost port 3000 where the React
 # server will be running is safe to receive requests

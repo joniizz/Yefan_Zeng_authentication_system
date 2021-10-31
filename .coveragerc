@@ -1,0 +1,8 @@
+[run]
+source=mysite/, users/,
+omit=
+    pipenv
+    */migrations/*
+    */test/*
+    */__init__.py
+    

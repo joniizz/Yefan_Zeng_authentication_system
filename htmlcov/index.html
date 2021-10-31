@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Coverage report</title>
+    <link rel="icon" sizes="32x32" href="favicon_32.png">
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <script type="text/javascript" src="jquery.min.js"></script>
+    <script type="text/javascript" src="jquery.ba-throttle-debounce.min.js"></script>
+    <script type="text/javascript" src="jquery.tablesorter.min.js"></script>
+    <script type="text/javascript" src="jquery.hotkeys.js"></script>
+    <script type="text/javascript" src="coverage_html.js"></script>
+    <script type="text/javascript">
+        jQuery(document).ready(coverage.index_ready);
+    </script>
+</head>
+<body class="indexfile">
+<div id="header">
+    <div class="content">
+        <h1>Coverage report:
+            <span class="pc_cov">71%</span>
+        </h1>
+        <img id="keyboard_icon" src="keybd_closed.png" alt="Show keyboard shortcuts" />
+        <form id="filter_container">
+            <input id="filter" type="text" value="" placeholder="filter..." />
+        </form>
+    </div>
+</div>
+<div class="help_panel">
+    <img id="panel_icon" src="keybd_open.png" alt="Hide keyboard shortcuts" />
+    <p class="legend">Hot-keys on this page</p>
+    <div>
+    <p class="keyhelp">
+        <span class="key">n</span>
+        <span class="key">s</span>
+        <span class="key">m</span>
+        <span class="key">x</span>
+        <span class="key">c</span> &nbsp; change column sorting
+    </p>
+    </div>
+</div>
+<div id="index">
+    <table class="index">
+        <thead>
+            <tr class="tablehead" title="Click to sort">
+                <th class="name left headerSortDown shortkey_n">Module</th>
+                <th class="shortkey_s">statements</th>
+                <th class="shortkey_m">missing</th>
+                <th class="shortkey_x">excluded</th>
+                <th class="right shortkey_c">coverage</th>
+            </tr>
+        </thead>
+        <tfoot>
+            <tr class="total">
+                <td class="name left">Total</td>
+                <td>220</td>
+                <td>64</td>
+                <td>0</td>
+                <td class="right" data-ratio="156 220">71%</td>
+            </tr>
+        </tfoot>
+        <tbody>
+            <tr class="file">
+                <td class="name left"><a href="d_5ac69c20924e2b76_asgi_py.html">mysite/asgi.py</a></td>
+                <td>4</td>
+                <td>4</td>
+                <td>0</td>
+                <td class="right" data-ratio="0 4">0%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="d_5ac69c20924e2b76_local_settings_py.html">mysite/local_settings.py</a></td>
+                <td>3</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="right" data-ratio="3 3">100%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="d_5ac69c20924e2b76_settings_py.html">mysite/settings.py</a></td>
+                <td>32</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="right" data-ratio="32 32">100%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="d_5ac69c20924e2b76_urls_py.html">mysite/urls.py</a></td>
+                <td>3</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="right" data-ratio="3 3">100%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="d_5ac69c20924e2b76_wsgi_py.html">mysite/wsgi.py</a></td>
+                <td>4</td>
+                <td>4</td>
+                <td>0</td>
+                <td class="right" data-ratio="0 4">0%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="d_f6c68bdc9becfc1e_admin_py.html">users/admin.py</a></td>
+                <td>16</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="right" data-ratio="16 16">100%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="d_f6c68bdc9becfc1e_apps_py.html">users/apps.py</a></td>
+                <td>4</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="right" data-ratio="4 4">100%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="d_f6c68bdc9becfc1e_forms_py.html">users/forms.py</a></td>
+                <td>11</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="right" data-ratio="11 11">100%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="d_f6c68bdc9becfc1e_manager_py.html">users/manager.py</a></td>
+                <td>20</td>
+                <td>1</td>
+                <td>0</td>
+                <td class="right" data-ratio="19 20">95%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="d_f6c68bdc9becfc1e_models_py.html">users/models.py</a></td>
+                <td>12</td>
+                <td>1</td>
+                <td>0</td>
+                <td class="right" data-ratio="11 12">92%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="d_f6c68bdc9becfc1e_serializers_py.html">users/serializers.py</a></td>
+                <td>6</td>
+                <td>6</td>
+                <td>0</td>
+                <td class="right" data-ratio="0 6">0%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="d_457a096bcc52aa1b_test_authentication_py.html">users/tests/test_authentication.py</a></td>
+                <td>57</td>
+                <td>36</td>
+                <td>0</td>
+                <td class="right" data-ratio="21 57">37%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="d_457a096bcc52aa1b_tests_forms_py.html">users/tests/tests_forms.py</a></td>
+                <td>3</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="right" data-ratio="3 3">100%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="d_457a096bcc52aa1b_tests_models_py.html">users/tests/tests_models.py</a></td>
+                <td>33</td>
+                <td>4</td>
+                <td>0</td>
+                <td class="right" data-ratio="29 33">88%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="d_457a096bcc52aa1b_tests_serializers_py.html">users/tests/tests_serializers.py</a></td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="right" data-ratio="0 0">100%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="d_457a096bcc52aa1b_tests_urls_py.html">users/tests/tests_urls.py</a></td>
+                <td>2</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="right" data-ratio="2 2">100%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="d_f6c68bdc9becfc1e_urls_py.html">users/urls.py</a></td>
+                <td>2</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="right" data-ratio="2 2">100%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="d_f6c68bdc9becfc1e_views_py.html">users/views.py</a></td>
+                <td>8</td>
+                <td>8</td>
+                <td>0</td>
+                <td class="right" data-ratio="0 8">0%</td>
+            </tr>
+        </tbody>
+    </table>
+    <p id="no_rows">
+        No items found using the specified filter.
+    </p>
+</div>
+<div id="footer">
+    <div class="content">
+        <p>
+            <a class="nav" href="https://coverage.readthedocs.io">coverage.py v6.0.2</a>,
+            created at 2021-10-29 01:06 +1100
+        </p>
+    </div>
+</div>
+</body>
+</html>
